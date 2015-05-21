@@ -1,0 +1,20 @@
+<div id="page_gallery">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+    	{{#each list}}
+		<div class="gallery-item swiper-slide">
+		<div class="gallery-action"><a href="javascript:;" class="gallery-back"><i class="ico-gallery-back"></i></a></div>
+		{{#if originalSrc}}
+		<a href="{{originalSrc}}" class="view-pic" target="_blank">查看原图</a>
+		{{/if}}
+		<div class="gallery-avatar"><img src="{{src}}" alt=""></div>
+		<div class="gallery-info">
+		  <div class="hd">
+		    <span class="num"><i>{{index}}</i>/<i>{{../length}}</i></span>
+		  </div>
+		</div>
+		</div>      
+		{{/each}}
+    </div>
+  </div>
+</div>

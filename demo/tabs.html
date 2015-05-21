@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <script src="../vendor/seajs/sea.js"></script>
+    <script src="../vendor/seajs/seajs-text.js"></script>
+    <!-- <script src="http://ue.17173cdn.com/a/lib/pandora.js"></script>-->
+    <script type="text/javascript">
+    seajs.config({
+        'base': '../sea-modules/',
+        'alias': {
+            '$': 'jquery/jquery/2.1.0/jquery',
+            "handlebars": "gallery/handlebars/1.3.0/handlebars",
+            'importstyle': 'pandora/importstyle/1.0.0/importstyle',
+            'base': 'pandora/base/1.0.0/base',
+            'widget': 'pandora/widget/1.0.0/widget'
+        }
+    });
+    </script>
+    <style type="text/css">
+    #tabs-container {
+        height: 400px;
+    }
+    
+    .tabs {
+        margin-top: 20px;
+        border-top: 2px solid #9ac7ed;
+        background: url(images/headbg.png) no-repeat left top #f9fafa;
+        background-size: auto 100%;
+        width: 100%;
+        height: 38px;
+        overflow: hidden;
+    }
+    
+    .tabs a {
+        font-size: 1.125em;
+        font-weight: normal;
+        text-align: center;
+        float: left;
+        width: 90px;
+        height: 38px;
+        line-height: 38px;
+        color: #2a70be;
+    }
+    
+    .tabs a.active {
+        border-top: 2px solid #2a70be;
+        margin-top: -2px;
+        background-image: url(images/tab_ui.png);
+        background-repeat: no-repeat;
+        background-size: 90px 39px;
+        background-position: left top;
+        color: #c14545;
+    }
+    
+    .news-list {
+        padding: 0 10px;
+    }
+    
+    .news-list li {
+        overflow: hidden;
+        border-bottom: 1px solid #eceef0;
+        box-shadow: 0 1px 1px #fff;
+        font-weight: normal;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1.125em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <a href="#" class="active">今日要闻</a>
+        <a href="#">焦点回顾</a>
+        <a href="#">明星玩家</a>
+    </div>
+    <div id="tabs-container" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="content-slide">
+                    <ul class="news-list">
+                        <li>DNF新版:职业平衡调整 单人挑战异界 </li>
+                        <li>WOW6.2奥法可召唤阿尔萨斯</li>
+                        <li>FF14国服婚礼最高价336</li>
+                        <li>韩服开售卖萌新时装</li>
+                        <li>《使命召唤OL》新版前瞻</li>
+                        <li>吴鑫鑫:梦幻无双版年内见</li>
+                        <li>卖肉的灰姑娘毁童年</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="content-slide">
+                    <ul class="news-list">
+                        <li>DNF新版:职业平衡调整 单人挑战异界 </li>
+                        <li>WOW6.2奥法可召唤阿尔萨斯</li>
+                        <li>FF14国服婚礼最高价336</li>
+                        <li>韩服开售卖萌新时装</li>
+                        <li>《使命召唤OL》新版前瞻</li>
+                        <li>吴鑫鑫:梦幻无双版年内见</li>
+                        <li>卖肉的灰姑娘毁童年</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="content-slide">
+                    <ul class="news-list">
+                        <li>DNF新版:职业平衡调整 单人挑战异界 </li>
+                        <li>WOW6.2奥法可召唤阿尔萨斯</li>
+                        <li>FF14国服婚礼最高价336</li>
+                        <li>韩服开售卖萌新时装</li>
+                        <li>《使命召唤OL》新版前瞻</li>
+                        <li>吴鑫鑫:梦幻无双版年内见</li>
+                        <li>卖肉的灰姑娘毁童年</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    seajs.use(['$', '../src/tabs'], function($, Tabs) {
+
+        var tabs = new Tabs({
+            tab: '.tabs', //选项卡
+            contentWrap: '#tabs-container' //内容容器
+        })
+
+        // var xx = new Focus({
+        //   element: '.swiper-container',
+        //   nextButton: '.swiper-button-next',
+        //   prevButton: '.swiper-button-prev',
+        //   scrollbar: '.swiper-scrollbar',
+        //   pagination: '.swiper-pagination',
+        //   loop: false
+        // });
+
+    });
+    </script>
+</body>
+
+</html>
