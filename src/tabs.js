@@ -27,7 +27,7 @@ define(function(require, exports, module) {
 
         defaults: {
             tab: '',
-            contentWrap: '',
+            contentWrap: ''
         },
 
         setup: function() {

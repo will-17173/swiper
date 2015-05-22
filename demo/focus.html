@@ -1,85 +1,43 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>Gallery</title>
+    <title>焦点图</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
     <script src="../vendor/seajs/sea.js"></script>
     <script src="../vendor/seajs/seajs-text.js"></script>
     <!-- <script src="http://ue.17173cdn.com/a/lib/pandora.js"></script>-->
     <script type="text/javascript">
-      seajs.config({
+    seajs.config({
         'base': '../sea-modules/',
         'alias': {
-          '$': 'jquery/jquery/2.1.0/jquery',
-          "handlebars": "gallery/handlebars/1.3.0/handlebars",
-          'importstyle': 'pandora/importstyle/1.0.0/importstyle',
-          'base': 'pandora/base/1.0.0/base',
-          'widget': 'pandora/widget/1.0.0/widget'
+            '$': 'jquery/jquery/2.1.0/jquery',
+            "handlebars": "gallery/handlebars/1.3.0/handlebars",
+            'importstyle': 'pandora/importstyle/1.0.0/importstyle',
+            'base': 'pandora/base/1.0.0/base',
+            'widget': 'pandora/widget/1.0.0/widget'
         }
-      });
+    });
     </script>
-   <!--  <link href="../src/swiper.css" type="text/css" rel="stylesheet" /> -->
     <style type="text/css">
-      img{ max-width: 100%;}
-      .swiper-slide{ }
     </style>
 </head>
 
 <body>
+    <script type="text/javascript">
+    seajs.use(['$', '../src/focus'], function($, Focus) {
 
-<div class="art-bd">
-          <p><strong>【17173专稿，转载请注明出处】</strong></p>
-<p>　　在5月20日举办的网易游戏“热爱发布会”上，网易首次宣布正在开发一款<strong>大型动作武侠网游</strong>《逆水寒》。《逆水寒》改编自武侠名家温瑞安的经典小说《四大名捕之逆水寒》，讲述北宋末年一段气壮山河的血腥大追捕，并牵扯出江湖恩怨、朝堂纷争、帮派仇杀、感情纠葛、市井百态等北宋生活画卷。</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh01s.jpg!a-3-480x.jpg"><br>插入逆水寒概念海报</p>
-<p>　　据悉，《逆水寒》作为网易下一代旗舰级的客户端游戏，研发团队凝聚了网易顶级研发力量，主打精品化、大作化、差异化。《逆水寒》将带来耳目一新的游戏体验与操作快感。</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh02s.jpg!a-3-480x.jpg"><br>插入逆水寒概念海报</p>
-<p>　　网易同时宣布，将同步开发制作《逆水寒》同名电影。游戏和电影将从剧情、人物、美术等多层次深入结合，实现电影中体验游戏、游戏中感受电影，打造真正的电影级网游。同时保证电影制作的艺术性，严格遵照电影制作规律，充分尊重原著，拍摄一部正经的武侠电影。据悉,电影《逆水寒》将由曾执导过电视剧《潜伏》的付玮担任导演，知名新武侠作家小椴编剧，网易与北京电影学院青年电影制片厂联合出品。</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh03s.jpg!a-3-480x.jpg"><br>插入逆水寒概念海报</p>
-<p>　　《逆水寒》作者、著名华语武侠巨匠温瑞安亲临现场，对游戏和电影表达了期待与祝福。在四大名捕系列被“戏说”多次后，《逆水寒》将肩负起修复温派武侠品牌的重任。</p>
-
-
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh05s.jpg!a-3-480x.jpg"><br>插入电视剧逆水寒剧照</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh06s.jpg!a-3-480x.jpg"><br>插入电视剧逆水寒剧照</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh08s.jpg!a-3-480x.jpg"><br>插入电视剧逆水寒剧照5</p>
-<p align="center"><img border="1" alt="<!--infoKeyWord-->最新图片" src="http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh09s.jpg!a-3-480x.jpg"><br>插入电视剧逆水寒剧照6</p><br><div align="right">【编辑：一人一剑】</div>        </div>
-
-
-
- <script type="text/javascript">
-    seajs.use(['$', '../src/gallery'],function($, Gallery){
-
-      var gallery = new Gallery({
-        // element: '.art-bd',
-        // exclude: '',
-        data: {
-          length: 2,
-          list: [
-            {
-              index: 1,
-              src: 'http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh01s.jpg!a-3-480x.jpg'
-            },
-            {
-              index: 2,
-              originalSrc: 'http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh01s.jpg',
-              src: 'http://i2.17173cdn.com/z6mhfw/2015/news/2015/05/20/lzy0520nsh01s.jpg!a-3-480x.jpg'
-            },         
-          ]
-
-          }
-      })
-
-      // var xx = new Focus({
-      //   element: '.swiper-container',
-      //   nextButton: '.swiper-button-next',
-      //   prevButton: '.swiper-button-prev',
-      //   scrollbar: '.swiper-scrollbar',
-      //   pagination: '.swiper-pagination',
-      //   loop: false
-      // });
-
+        var focus = new Focus({
+            element: '.swiper-container',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            scrollbar: '.swiper-scrollbar',
+            pagination: '.swiper-pagination',
+            loop: false
+        })
     });
-</script>
+    </script>
 </body>
 
 </html>
